@@ -1,21 +1,15 @@
 #include <stdlib.h>
 #include "STACK.h"
 
-typedef struct {
-    int *base;
-    int *top;
-    int stacksize;
-}SqStack;
-
 Status InitStack(SqStack *S){
-    (*S).base = (int *)malloc(STACK_INIT_SIZE*sizeof(int64_t));
+    (*S).base = (ELEM_TYPE *)malloc(STACK_INIT_SIZE*sizeof(ELEM_TYPE));
     if(!(*S).base) exit(OVERFLOW);
     (*S).top = (*S).base;
     (*S).stacksize = STACK_INIT_SIZE;
     return OK;
 }
 
-Status GetTop(SqStack S,int *e){
+Status GetTop(SqStack S,ELEM_TYPE *e){
     if(S.top == S.base){
         return ERROR;
     }else {
@@ -24,9 +18,9 @@ Status GetTop(SqStack S,int *e){
     }
     }
 
-Status Push(SqStack *S,int e){
+Status Push(SqStack *S,ELEM_TYPE e){
     if (S->top - S->base >= S->stacksize){
-        S->base = (int *)realloc(S->base,(S->stacksize+STACK_INIT_SIZE) * sizeof(int));
+        S->base = (ELEM_TYPE *)realloc(S->base,(S->stacksize+STACK_INIT_SIZE) * sizeof(ELEM_TYPE));
         if(!S->base)exit(OVERFLOW);
         S->top = S->base + S->stacksize;
         S->stacksize += STACKINCREMENT;
@@ -35,7 +29,7 @@ Status Push(SqStack *S,int e){
     return OK;
 }
 
-Status Pop(SqStack *S, int *e){
+Status Pop(SqStack *S, ELEM_TYPE *e){
     if(S->top == S->base) return ERROR;
     *e = *(--S->top);
     return OK;
@@ -47,7 +41,7 @@ Status StackEmpty(SqStack S){
 }
 
 Status GiveMeMore(SqStack *S){
-    S->base (int *)realloc(S->base,(S->stacksize+STACK_INIT_SIZE) * sizeof(int));
+    S->base (ELEM_TYPE *)realloc(S->base,(S->stacksize+STACK_INIT_SIZE) * sizeof(ELEM_TYPE));
     if(!S->base)exit(ERROR);
     return OK;
 }
