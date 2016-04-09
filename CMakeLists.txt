@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.3)
+project(DS_EXP)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+include_directories(lib)
+set(SOURCE_FILES  ds_1.c ds_2.c lib/STACK.c)
+add_executable(ds_1 ds_1.c lib/STACK.c)
+add_executable(ds_2 ds_2.c)
+add_executable(ds_3 ds_3.c lib/STACK.c)
+add_executable(ds_4 ds_4.c lib/STR_STACK.c)
+add_library(sqlist lib/SqList.c lib/SqList.h lib/common.h)
