@@ -18,8 +18,14 @@ typedef struct {
     ELEM_TYPE *elem;
     int length;
     int listsize;
-}SqList;
+} SqList;
 
 Status InitList_Sq(SqList *L);
+
 Status ListInsert_Sq(SqList *L, int i, ELEM_TYPE e);
-Status ListDelete_Sq(SqList *L,int i, ELEM_TYPE *e);
+
+Status ListDelete_Sq(SqList *L, int i, ELEM_TYPE *e);
+
+int LocateElem_Sq(SqList L, ELEM_TYPE e, Status (*compare)(ELEM_TYPE, ELEM_TYPE));
+
+void MergeList_Sq(SqList La,SqList Lb,SqList *Lc);

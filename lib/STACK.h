@@ -14,13 +14,20 @@ typedef struct {
     ELEM_TYPE *base;
     ELEM_TYPE *top;
     int stacksize;
-}SqStack;
+} SqStack;
 
 Status InitStack(SqStack *S);
+
 Status DestroyStack(SqStack *S);
+
 Status ClearStack(SqStack *S);
-Status GetTop(SqStack S,ELEM_TYPE *e);
-Status Push(SqStack *S,ELEM_TYPE e);
-Status Pop(SqStack *S,ELEM_TYPE *e);
+
+Status GetTop(SqStack S, ELEM_TYPE *e);
+
+Status Push(SqStack *S, ELEM_TYPE e);
+
+Status Pop(SqStack *S, ELEM_TYPE *e);
+
 Status StackEmpty(SqStack S);
-Status GiveMeMore(SqStack S);
+
+Status GiveMeMore(SqStack *S);

@@ -7,7 +7,7 @@
 
 #endif //DS_EXP_COMMON_H
 
-//状态码
+//Status code
 #define STACK_INIT_SIZE 100
 #define STACKINCREMENT 10
 #define OK 1
