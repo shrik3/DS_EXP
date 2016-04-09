@@ -22,4 +22,4 @@ typedef struct {
 
 Status InitList_Sq(SqList *L);
 Status ListInsert_Sq(SqList *L, int i, ELEM_TYPE e);
-Status ListDelete_Sq()
+Status ListDelete_Sq(SqList *L,int i, ELEM_TYPE *e);
