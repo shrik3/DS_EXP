@@ -19,3 +19,4 @@ typedef struct LNode {
 
 } LNode, *LinkList;
 
+Status GetElem_L(LinkList L,int i, ELEM_TYPE *e);
