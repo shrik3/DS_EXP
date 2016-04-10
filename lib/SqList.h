@@ -29,3 +29,5 @@ Status ListDelete_Sq(SqList *L, int i, ELEM_TYPE *e);
 int LocateElem_Sq(SqList L, ELEM_TYPE e, Status (*compare)(ELEM_TYPE, ELEM_TYPE));
 
 void MergeList_Sq(SqList La,SqList Lb,SqList *Lc);
+
+int ListLength(SqList L);

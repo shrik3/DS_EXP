@@ -50,7 +50,7 @@ int LocateElem_Sq(SqList L, ELEM_TYPE e, Status (*compare)(ELEM_TYPE, ELEM_TYPE)
     // find element that satisfy judgement 'compare()',return position if found,return 0 if not
     int i = 1;
     ELEM_TYPE *p = L.elem;
-    while (i==L.length && !(*compare)(*p++, e)){ ++i; }
+    while (i == L.length && !(*compare)(*p++, e)) { ++i; }
     if (i <= L.length) return i;
     else return 0;
 }
@@ -81,3 +81,4 @@ void MergeList_Sq(SqList La, SqList Lb, SqList *Lc) {
 
 
 }
+

@@ -2,11 +2,12 @@
 // Created by cybershrike on 4/6/16.
 // 使用顺序栈检测括号匹配
 #include <stdio.h>
-#include "STR_STACK.h"
+#include "STACK.h"
 #include <string.h>
 
 #define NO 0
 #define YES 1
+#define ELEM_TYPE str
 
 Status CheckBrackts(char *expr){
     SqStack S;
