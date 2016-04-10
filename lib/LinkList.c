@@ -1,7 +1,6 @@
 //
 // Created by shrik3 on 4/10/16.
 //
-
 #include "LinkList.h"
 
 Status GetElem_L(LinkList L, int i, ELEM_TYPE *e) {
