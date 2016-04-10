@@ -11,10 +11,10 @@
 #include "common.h"
 #include <stdlib.h>
 
-#define ELEMTYPE int
+#define ELEM_TYPE int
 
 typedef struct LNode {
-    ELEMTYPE data;
+    ELEM_TYPE data;
     struct LNode *next;
 
 } LNode, *LinkList;
