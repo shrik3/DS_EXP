@@ -19,4 +19,8 @@ typedef struct LNode {
 
 } LNode, *LinkList;
 
-Status GetElem_L(LinkList L,int i, ELEM_TYPE *e);
+Status ListInsert_L(LinkList *L, int i, ELEM_TYPE e);
+
+Status GetElem_L(LinkList L, int i, ELEM_TYPE *e);
+
+
