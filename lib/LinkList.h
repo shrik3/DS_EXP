@@ -23,4 +23,5 @@ Status ListInsert_L(LinkList *L, int i, ELEM_TYPE e);
 
 Status GetElem_L(LinkList L, int i, ELEM_TYPE *e);
 
+Status ListDelete_L(LinkList *La,int i, ELEM_TYPE *e);
 
