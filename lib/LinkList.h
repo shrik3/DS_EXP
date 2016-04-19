@@ -19,9 +19,13 @@ typedef struct LNode {
 
 } LNode, *LinkList;
 
-Status ListInsert_L(LinkList *L, int i, ELEM_TYPE e);
+Status ListInsert_L(LinkList L, int i, ELEM_TYPE e);
 
 Status GetElem_L(LinkList L, int i, ELEM_TYPE *e);
 
-Status ListDelete_L(LinkList *La,int i, ELEM_TYPE *e);
+Status ListDelete_L(LinkList La,int i, ELEM_TYPE *e);
+
+void MergeList_L(LinkList La,LinkList Lb,LinkList Lc);
+
+
 
