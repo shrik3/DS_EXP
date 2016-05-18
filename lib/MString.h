@@ -18,6 +18,6 @@ typedef struct{
 
 int StrLength(HString S);
 Status StrAssign(HString *TAR,char *SRC);
-
+Status StrConcat(HString *TAR,HString PRE,HString POST);
 
 

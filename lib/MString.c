@@ -13,7 +13,7 @@ Status StrAssign(HString *TAR, char *SRC){
     int i;
     int j;
     if(TAR->ch){
-        //free(TAR->ch);     ???????????
+        free(TAR->ch);   //  ???????????
     }
     for(i=0;SRC[i];i++){}
     if(!i){
@@ -34,3 +34,8 @@ Status StrAssign(HString *TAR, char *SRC){
     return OK;
 }
 
+Status StrConcat(HString *TAR,HString PRE,HString POST){
+
+
+
+}
