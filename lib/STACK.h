@@ -6,11 +6,11 @@
 #ifndef DS_EXP_STACK_H
 #define DS_EXP_STACK_H
 
-#endif //DS_EXP_STACK_H
+#include "BiTree.h"
 
-#define ELEM_TYPE int
+#define ELEM_TYPE BiTree
 
-typedef struct {
+typedef struct stack{
     ELEM_TYPE *base;
     ELEM_TYPE *top;
     int stacksize;
@@ -31,3 +31,5 @@ Status Pop(SqStack *S, ELEM_TYPE *e);
 Status StackEmpty(SqStack S);
 
 Status GiveMeMore(SqStack *S);
+
+#endif //DS_EXP_STACK_H
